@@ -1,9 +1,9 @@
-# COLOR FORMATTING
+# COLOR FORMATTINGS
 col_input = "\033[1;0m{}:\033[1;31m ".format
 col_output = "\033[1;34m{}\033[1;0m".format
 col_warning = "\033[1;33m{}\033[1;0m".format
 
-print("Welcome to Dek Depe's Name Tag Store!\n" + "\033[1;0m-" * 45)
+print("\033[1;0mWelcome to Dek Depe's Name Tag Store!\n" + "-" * 45)
 
 # INPUT
 nama = input(col_input("Nama\t".expandtabs(25)))
@@ -48,3 +48,5 @@ print(
 print(
     "\033[1;0m-" * 45 + "\nTerima kasih sudah berbelanja di Dek Depe's Name Tag Store!"
 )
+
+# END OF PROGRAM
