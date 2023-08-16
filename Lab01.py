@@ -26,10 +26,10 @@ print("\033[1;0m-" * 45)
 harga = 0
 for i in range(1, n+1):
     print(f"\033[1;0mName Tag {i}:")
-    bentuk = (input(col_input("Silahkan masukan bentuk name tag anda\t".expandtabs(38))))
-    while bentuk.lower() != "segiempat" and bentuk.lower() != "segitiga" and bentuk.lower() != "segi empat" and bentuk.lower() != "segi tiga":
+    bentuk = (input(col_input("Silahkan masukan bentuk name tag anda\t".expandtabs(38).lower())))
+    while bentuk != "segiempat" and bentuk != "segitiga" and bentuk != "segi empat" and bentuk != "segi tiga":
         print(col_warning("Bentuk yang bisa digunakan hanya segiempat atau segitiga!"))
-        bentuk = (input(col_input("Silahkan masukan bentuk name tag anda\t".expandtabs(38))))
+        bentuk = (input(col_input("Silahkan masukan bentuk name tag anda\t".expandtabs(38).lower())))
     if bentuk == "segiempat":
         while True:
             try:
