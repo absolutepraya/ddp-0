@@ -5,12 +5,12 @@ col_warning = "\033[1;33m{}\033[1;0m".format
 
 print("\033[1;0mWelcome to Dek Depe's Name Tag Store!\n" + "-" * 45)
 
-# INPUT NAMA, TGL LAHIR, JURUSAN, MOTTO, JUMLAH NAME TAG (n)
+# INPUT NAMA, TGL LAHIR, JURUSAN, MOTTO
 nama = input(col_input("Nama\t".expandtabs(34)))
 tanggal_lahir = input(col_input("Tanggal lahir\t".expandtabs(34)))
 jurusan = input(col_input("Jurusan\t".expandtabs(34)))
 motto_hidup = input(col_input("Motto hidup\t".expandtabs(34)))
-while True:
+while True: # INPUT JUMLAH NAME TAG (n)
     try:
         n = int(input(col_input("Silahkan masukkan banyak name tag\t".expandtabs(34))))
         if n <= 0:
@@ -22,16 +22,17 @@ while True:
 
 print("\033[1;0m-" * 45)
 
-# INPUT BENTUK & UKURAN
+# 'FOR' UNTUK INPUT BENTUK & UKURAN
 harga = 0
 for i in range(1, n+1):
     print(f"\033[1;0mName Tag {i}:")
-    bentuk = (input(col_input("Silahkan masukan bentuk name tag anda\t".expandtabs(38))))
-    while bentuk != "segiempat" and bentuk != "segitiga":
+    # INPUT BENTUK
+    bentuk = input(col_input("Silahkan masukan bentuk name tag anda\t".expandtabs(38))).upper()
+    while bentuk != "SEGIEMPAT" and bentuk != "SEGITIGA" and bentuk != "SEGI EMPAT" and bentuk != "SEGI TIGA":
         print(col_warning("Bentuk yang bisa digunakan hanya segiempat atau segitiga!"))
-        bentuk = (input(col_input("Silahkan masukan bentuk name tag anda\t".expandtabs(38))))
-    if bentuk == "segiempat":
-        while True:
+        bentuk = input(col_input("Silahkan masukan bentuk name tag anda\t".expandtabs(38))).upper()
+    if bentuk == "SEGIEMPAT" or bentuk == "SEGI EMPAT": # JIKA BENTUK SEGIEMPAT
+        while True: # INPUT PANJANG (p)
             try:
                 p = float(input(col_input("Masukan panjang (cm)\t".expandtabs(38))))
                 if p <= 0:
@@ -40,7 +41,7 @@ for i in range(1, n+1):
                     break
             except ValueError:
                 print(col_warning("Masukkan nilai panjang dengan tepat!"))
-        while True:
+        while True: # INPUT LEBAR (l)
             try:
                 l = float(input(col_input("Masukan lebar (cm)\t".expandtabs(38))))
                 if l <= 0:
@@ -50,8 +51,8 @@ for i in range(1, n+1):
             except ValueError:
                 print(col_warning("Masukkan nilai lebar dengan tepat!"))
         harga += p*l*100
-    else:
-        while True:
+    else: # JIKA BENTUK SEGITIGA
+        while True: # INPUT PANJANG ALAS (a)
             try:
                 a = float(input(col_input("Masukan panjang alas (cm)\t".expandtabs(38))))
                 if a <= 0:
@@ -60,7 +61,7 @@ for i in range(1, n+1):
                     break
             except ValueError:
                 print(col_warning("Masukkan nilai panjang alas dengan tepat!"))
-        while True:
+        while True: # INPUT TINGGI (t)
             try:
                 t = float(input(col_input("Masukan tinggi (cm)\t".expandtabs(38))))
                 if t <= 0:
