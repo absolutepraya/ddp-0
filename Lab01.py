@@ -30,7 +30,7 @@ for i in range(1, n+1):
     while bentuk != "segiempat" and bentuk != "segitiga" and bentuk != "segi empat" and bentuk != "segi tiga":
         print(col_warning("Bentuk yang bisa digunakan hanya segiempat atau segitiga!"))
         bentuk = (input(col_input("Silahkan masukan bentuk name tag anda\t".expandtabs(38).lower())))
-    if bentuk == "segiempat":
+    if bentuk == "segiempat" or bentuk == "segi empat":
         while True:
             try:
                 p = float(input(col_input("Masukan panjang (cm)\t".expandtabs(38))))
