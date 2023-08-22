@@ -16,7 +16,7 @@ def validation_in(value):
         try:
             sym = type_in(value)
             if sym <= 0:
-                print(f"Nilai {value} harus lebih dari nol!")
+                print(col_warning(f"Nilai {value} harus lebih dari nol!"))
             else:
                 return sym
         except ValueError:
@@ -68,7 +68,7 @@ for i in range(1, num+1):
     for j in range(1, n+1):
         bentuk = input(col_input(f"\nBentuk nametag ke-{j} (segiempat/segitiga/lingkaran/random)  : ")).upper()
         while bentuk != "SEGIEMPAT" and bentuk != "SEGITIGA" and bentuk != "LINGKARAN" and bentuk != "RANDOM":
-            print("Pilih salah satu dari bentuk-bentuk yang tersedia!")
+            print(col_warning("Pilih salah satu dari bentuk-bentuk yang tersedia!"))
             bentuk = input(col_input(f"Bentuk nametag ke-{j} (segiempat/segitiga/lingkaran/random)  : ")).upper()
         if bentuk == "SEGIEMPAT":
             harga +=luas_segiempat()
