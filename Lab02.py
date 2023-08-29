@@ -2,9 +2,9 @@ import random
 import math
 
 # COLOR FORMATTINGS
-col_input = "\033[1;0m{}\033[1;31m ".format
-col_output = "\033[1;34m{}\033[1;0m".format
-col_warning = "\033[1;33m{}\033[1;0m".format
+col_input = "\033[1;0m{}\033[1;31m ".format # MERAH
+col_output = "\033[1;34m{}\033[1;0m".format # BIRU
+col_warning = "\033[1;33m{}\033[1;0m".format # KUNING
 
 # FUNCTION UNTUK INPUT SEMUA VALUE
 def type_in(type):
@@ -23,7 +23,7 @@ def validation_in(value):
             print(col_warning(f"Masukkan nilai {value} dengan tepat!"))
 
 # FUNCTIONS UNTUK HITUNG LUAS & HARGA
-def luas_segiempat(): # 'p' ADALAH PANJANG & 'l' FOR LEBAR
+def luas_segiempat(): # 'p' ADALAH PANJANG & 'l' ADALAH LEBAR
     p = validation_in("panjang (cm)")
     l = validation_in("lebar (cm)")
     harga_segiempat = p*l*100
@@ -71,7 +71,7 @@ for i in range(1, num+1):
             print(col_warning("Pilih salah satu dari bentuk-bentuk yang tersedia!"))
             bentuk = input(col_input(f"Bentuk nametag ke-{j} (segiempat/segitiga/lingkaran/random)  : ")).upper()
         if bentuk == "SEGIEMPAT":
-            harga +=luas_segiempat()
+            harga += luas_segiempat()
         elif bentuk == "SEGITIGA":
             harga += luas_segitiga()
         elif bentuk == "LINGKARAN":
