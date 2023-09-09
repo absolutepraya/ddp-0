@@ -14,3 +14,8 @@ The program prompts the user to input the quantity of name tags desired and gath
 In response to decreased business following a beta update, Dek Depe's printing venture faced stiff competition from Dek Penol, who offered lower prices. To level the playing field, Dek Depe aims to update their system to v1.0, like Dek Penol's. This entails accommodating circular name tags via dedicated functions and allowing input for multiple customers' tag orders in a single run.
 
 The program requirements involve gathering input for customer counts and tag quantities, allowing shapes like rectangles, triangles, and circles. Vital area-calculation functions are a must. The updated system caters to multiple customers' orders in one go, eliminating re-runs. The program concludes by printing paper costs for selected tags, with all inputs guaranteed valid.
+
+## 3️⃣ Lab03
+Dek Penol, as a competitor to Dek Depe, recently upgraded its system to version v1.5, introducing circle shapes and expanding the range of shapes to include n-squares. Motivated by this, Dek Depe decided to make a final update to his printing system to version v2.0. 
+
+Unlike Dek Penol's focus on shapes, Dek Depe aimed to enhance functionality. His update included continuous system operation until manually stopped, displaying customer name tag orders through a queue number mechanism, offering various paper material options with corresponding pricing and quality, and ensuring all area and price calculations displayed only two decimal places. Dek Depe anticipates that this update will strengthen his business and outperform Dek Penol's printing business. In his quest for dominance, he seeks assistance from his trusted IT team member to implement these changes.
